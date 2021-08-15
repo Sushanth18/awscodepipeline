@@ -1,3 +1,2 @@
-#!/bin/bash
-
-service cdk-app start
+cd /tmp
+java -jar myawscdplanet-0.0.1-SNAPSHOT.jar &
