@@ -7,13 +7,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn test 
+      - mvn clean install
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
 artifacts:
   files:
-    - target/my-app-1.0-SNAPSHOT.jar
+    - target/myawscdplanet-0.0.1-SNAPSHOT
     - appspec.yml
   discard-paths: yes
