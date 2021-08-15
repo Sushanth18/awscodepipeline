@@ -1,15 +1,24 @@
 version: 0.2
 
+
 phases:
-   build:
+  install:
+    runtime-versions:
+      java: openjdk8
+  
+  build:
     commands:
-    - echo building the justiceleague-tracker
-    - mvn clean install
+      - echo Build started on `date`
+      - mvn -f web/pom.xml -P $BUILD_ENV_NAME clean package -X
+    
 artifacts:
-  files:
-  - target/*.jar
-  - scripts/*.sh
-  - appspec.yml
-  discard-paths: yescache:
+  files: 
+    - target/*.jar
+    - scripts/*.sh
+    - appspec.yml  
+  name: WarDeployment
+  discard-paths: yes
+  
+cache:
   paths:
-  - '/root/.m2/**/*'
+    - '/root/.m2/**/*'
