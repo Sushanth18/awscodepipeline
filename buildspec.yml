@@ -14,7 +14,7 @@ phases:
 artifacts:
   files: 
     - target/*.jar
-    - scripts/*.sh
+    - scripts/stop_server.sh
     - appspec.yml  
   name: WarDeployment
   discard-paths: yes
