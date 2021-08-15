@@ -1,13 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
    build:
     commands:
     - echo building the justiceleague-tracker
-    - mvn install
+    - mvn clean install
 artifacts:
   files:
   - target/*.jar
