@@ -13,7 +13,7 @@ public class HelloController {
     public String hello() {
         String message = "Hello AWS Continuous Delivery with Notifications!";
         try {
-        	System.out.print("demo:::::");
+        	System.out.print("demo:::::::::12");
             InetAddress ip = InetAddress.getLocalHost();
             message += " From host: " + ip;
         } catch (UnknownHostException e) {

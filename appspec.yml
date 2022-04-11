@@ -5,17 +5,17 @@ files:
   destination: C:\tmp
 hooks:
   BeforeInstall:
-    - location: C:\tmp\before-install.bat
+    - location: scripts\before-install.bat
       timeout: 900
 
   Install:
-    - location: C:\tmp\install.bat     
+    - location: scripts\install.bat     
       timeout: 900
 
   AfterInstall:
-    - location: C:\tmp\after-install.bat     
+    - location: scripts\after-install.bat     
       timeout: 900
 
   ApplicationStart:
-    - location: C:\tmp\application-start.bat
+    - location: scripts\application-start.bat
       timeout: 900
