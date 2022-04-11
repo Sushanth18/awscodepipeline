@@ -11,4 +11,14 @@ artifacts:
     - appspec.yml  
   name: WarDeployment
   discard-paths: yes
+ 
+  secondary-artifacts:     
+    WarUpload: 
+      files: 
+        - target/ROOT.war
+      discard-paths: yes 
+      name: WarUpload
   
+cache:
+  paths:
+    - '/root/.m2/**/*'
