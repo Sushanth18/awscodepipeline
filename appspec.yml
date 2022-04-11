@@ -2,4 +2,20 @@ version: 0.0
 os: windows
 files:
 - source: /ROOT.war
-  destination: C:\Program Files (x86)\Apache Software Foundation\Tomcat 9.0\webapps
+  destination: C:\tmp
+hooks:
+  BeforeInstall:
+    - location: C:\tmp\before-install.bat
+      timeout: 900
+
+  Install:
+    - location: C:\tmp\install.bat     
+      timeout: 900
+
+  AfterInstall:
+    - location: C:\tmp\after-install.bat     
+      timeout: 900
+
+  ApplicationStart:
+    - location: C:\tmp\application-start.bat
+      timeout: 900
