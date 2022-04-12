@@ -6,7 +6,8 @@ phases:
       - mvn clean install
     
 artifacts:
-  files: 
+  files:
+    - scripts/* 
     - target/ROOT.war
     - appspec.yml  
   name: WarDeployment
