@@ -4,9 +4,7 @@ node{
    def tomcatBin = 'C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
-    when {
-                branch 'production'
-            }
+   
       steps {
 	 git 'https://github.com/Sushanth18/awscodepipeline.git'
 	 }
