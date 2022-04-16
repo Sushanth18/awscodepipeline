@@ -17,7 +17,7 @@ pipeline {
                 bat "copy target\\ROOT.war \"C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\webapps\\ROOT.war\""
             }
         }
-        stage('Start Tomcat') {
+        stage('Start Tomcat ') {
             steps {
                 sleep(time: 5, unit: "SECONDS")
                 bat "C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\bin\\startup.bat"
