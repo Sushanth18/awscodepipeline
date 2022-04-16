@@ -1,9 +1,10 @@
-node{
+pipeline{
 
    def tomcatWeb = 'C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\webapps'
    def tomcatBin = 'C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\bin'
    def tomcatStatus = ''
-   stage('SCM Checkout'){
+	stages{
+	stage('SCM Checkout'){
    
       steps {
 	 git 'https://github.com/Sushanth18/awscodepipeline.git'
@@ -22,4 +23,5 @@ node{
          bat "${tomcatBin}\\startup.bat"
          sleep(time:100,unit:"SECONDS")
    }
+	}
 }
