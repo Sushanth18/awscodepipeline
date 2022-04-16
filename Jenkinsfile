@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM Checkout'){
             when {
-                changelog '.*^\\[deploy\\] .+$'
+                changelog 'deploy'
             }
             steps {
                 git 'https://github.com/Sushanth18/awscodepipeline.git'
