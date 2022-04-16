@@ -4,7 +4,12 @@ node{
    def tomcatBin = 'C:\\sushanth_workspace\\software\\apache-tomcat-9.0.5\\bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
-     git 'https://github.com/Sushanth18/awscodepipeline.git'
+    when {
+                branch 'production'
+            }
+      steps {
+	 git 'https://github.com/Sushanth18/awscodepipeline.git'
+	 }
    }
    stage('Compile-Package-create-war-file'){
       def mvnHome =  tool name: 'maven-3', type: 'maven' 
