@@ -7,8 +7,9 @@ pipeline {
             }
         }
         stage('Compile-Package-create-war-file'){
-            bat "mvn clean install"
-
+            steps {
+                bat "mvn clean install"
+            }
         }
 
         stage('Deploy to Tomcat'){
