@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('SCM Checkout'){
             steps {
-                git 'https://github.com/Sushanth18/awscodepipeline.git'
+                git credentialsId:'d1325e94-3a6f-43d3-a548-aef54d35eea4',
+				    url:'https://github.com/Sushanth18/awscodepipeline.git'
             }
         }
         stage('Compile-Package-create-war-file'){
